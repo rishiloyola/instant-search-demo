@@ -39,8 +39,8 @@ pipeline {
 	}
 	stage('Deliver') {
             steps {
-		sh 'docker stop nodeapp-prod'
-		sh 'docker rm nodeapp-prod'
+		sh 'docker stop nodeapp-prod || true'
+		sh 'docker rm nodeapp-prod || true'
 		sh 'docker system prune -f'
                 sh 'docker run --name nodeapp-prod -p 3000:3000 -d algolia-prod'
             }
