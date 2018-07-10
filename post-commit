@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl --user rishi:rishi http://localhost:8080/job/algolia/build?token=1a4130db43cec16fe69cecc607dee47d
